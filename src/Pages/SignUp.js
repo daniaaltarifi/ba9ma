@@ -107,6 +107,7 @@ function SignUp() {
                     src={require("../assets/ba9ma2.png")}
                     alt="ba9ma logo"
                     className="img-fluid logo_auth"
+                    loading="lazy"
                   />
                 </div>
                 <div>

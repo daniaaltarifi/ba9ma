@@ -10,7 +10,7 @@ function ProfileIconNavbar() {
     <li><Link to="/profile" className="dropdown-item" href="#">حسابي</Link></li>
     <li><Link to="/login" className="dropdown-item" href="#"> تسجيل الخروج</Link></li>
   </ul>
-    <img src={require("../assets/profile.png")} alt="profile img" className='img-fluid  img_icon_navbar' />
+    <img src={require("../assets/profile.png")} alt="profile img" className='img-fluid  img_icon_navbar' loading="lazy"/>
     </div>
         
     </>

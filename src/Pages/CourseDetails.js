@@ -581,6 +581,7 @@ useEffect(() => {
                 src={`https://ba9maacademy.kasselsoft.online/${course.img}`}
                 alt="coursedetails"
                 className="img-fluid img_coursedetails"
+                loading="lazy"
               />{" "}
             </div>
             <div className="col-lg-6 col-md-6 cl-sm-12 ">
@@ -1046,6 +1047,7 @@ useEffect(() => {
                             alt="teacher img"
                             height={"80vh"}
                             width={"80vh"}
+                            loading="lazy"
                           />
                         </div>
                         <div className="col-lg-9 col-md-9 col-sm-12">
@@ -1119,9 +1121,10 @@ useEffect(() => {
                                   <div className="col-lg-3 col-md-3 col-sm-12">
                                     <img
                                       src={require("../assets/acc_icon.png")}
-                                      alt=""
+                                      alt="course"
                                       height={"70vh"}
                                       width={"70vh"}
+                                      loading="lazy"
                                     />
                                   </div>
                                   <div className="col-lg-9 col-md-9 col-sm-12">
