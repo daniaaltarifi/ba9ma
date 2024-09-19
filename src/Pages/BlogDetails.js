@@ -124,6 +124,7 @@ function BlogDetails() {
                   src={`https://ba9maacademy.kasselsoft.online/${img}`}
                   alt="coursedetails"
                   className="img-fluid img_blogdetails"
+                  loading="lazy"
                 />{" "}
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12  justify-content-center align-items-center">
@@ -182,6 +183,7 @@ function BlogDetails() {
                                     height={"70vh"}
                                     width={"70vh"}
                                     className="ps-3"
+                                    loading="lazy"
                                   />
                                 </div>
                                 <div className="col-lg-11 col-md-10 col-sm-12 ">
@@ -247,6 +249,7 @@ function BlogDetails() {
                           src={`https://ba9maacademy.kasselsoft.online/` + lastthreeblogs.img}
                           alt=""
                           className="img-fluid img_last_blog"
+                          loading="lazy"
                         />
                         <p className="desc_last_blog">{lastthreeblogs.title}</p>
                       </div>

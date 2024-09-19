@@ -138,9 +138,10 @@ function MyCourses() {
      {/* background image */}
      <div className="slide-item">
      <img
-       src={require("../assets/coursat.jpeg")}
+       src={require("../assets/corsee.webp")}
        alt={`Contact Video`}
        className="img_home"
+       loading="lazy"
      />
      <div className="overlay">
        <div className="overlay-content">
@@ -208,6 +209,7 @@ function MyCourses() {
                  src={`https://ba9maacademy.kasselsoft.online/${course.img}`}
                  className="card-img-top img-fluid card_img"
                  alt={course.subject_name}
+                 loading="lazy"
                />
                <div className="card-body">
                  <div>

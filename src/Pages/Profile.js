@@ -144,8 +144,9 @@ console.error('Error updating profile:', error);
               <button className="img_profile" onClick={handleButtonClick}>
                 <img
                   src={imageUrl}
-                  alt=""
+                  alt="profile"
                   className="img-fluid"
+                  loading="lazy"
                 />
               </button>
               <input

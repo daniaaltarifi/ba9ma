@@ -113,6 +113,7 @@ function CardPrice() {
                     src={`https://ba9maacademy.kasselsoft.online/${step.img}`}
                     alt="www icon"
                     className="img-fluid icon_orderby_cardprice"
+                    loading="lazy"
                   />{" "}
                 </div>{" "}
                 <p className="name_of_orderby_cardprice">{step.title} </p>
@@ -159,7 +160,7 @@ function CardPrice() {
                             window.scrollTo(0, 0);
                           }}
                         >
-                          <img src={course.image} alt={course.courseName} />
+                          <img src={course.image} alt={course.courseName} loading="lazy"/>
                           {course.courseName}
                         </li>
                       ))

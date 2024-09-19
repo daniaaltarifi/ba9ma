@@ -74,8 +74,9 @@ function StudentsOpinions() {
                       </div>
                       <img
                         src={require("../assets/acc_icon.png")}
-                        alt=""
+                        alt="student"
                         className="img-fluid account_img"
+                        loading="lazy"
                       />
                     </div>
                   </div>

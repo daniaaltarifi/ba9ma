@@ -18,7 +18,7 @@ function AuthNavbar() {
               <li><Link to={`/profile/${userId}`} className="dropdown-item">حسابي</Link></li>
               <li><Link to="/login" onClick={logout} className="dropdown-item">تسجيل الخروج</Link></li>
             </ul>
-            <img src={`https://ba9maacademy.kasselsoft.online/${img}` || img} alt="profile img" className="img-fluid img_icon_navbar" />
+            <img src={`https://ba9maacademy.kasselsoft.online/${img}` || img} alt="profile img" className="img-fluid img_icon_navbar"loading="lazy" />
           </div>
         </>
       ) : (

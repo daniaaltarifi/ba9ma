@@ -97,6 +97,7 @@ function WhoWeAre() {
                 src={`https://ba9maacademy.kasselsoft.online/${tech.img}`}
                 alt="about"
                 className="about_img img-fluid "
+                loading="lazy"
               />
             </div>
           </div>

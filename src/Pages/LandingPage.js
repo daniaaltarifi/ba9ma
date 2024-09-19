@@ -120,6 +120,7 @@ return (
                   src={require("../assets/vectorBook.png")}
                   alt="vector book"
                   className="vector_icon"
+                  loading="lazy"
                 />
               </div>
               <div className="col-lg-10 col-md-12 col-sm-12">

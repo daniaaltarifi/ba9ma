@@ -87,6 +87,7 @@ function Navbar({ handleLogout }) {
                   src={require("../assets/logo.png")}
                   alt="logo ba9ma"
                   className="logo_size"
+                  loading="lazy"
                 />
               </Link>
             </div>

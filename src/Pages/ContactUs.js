@@ -74,6 +74,7 @@ useEffect(() => {
                         src={require("../assets/phone.png")}
                         alt="phone"
                         className="img-fluid icon_contact"
+                        loading="lazy"
                       />
                     </div>
                     <div>
@@ -90,6 +91,7 @@ useEffect(() => {
                         src={require("../assets/whatsapp.png")}
                         alt="phone"
                         className="img-fluid icon_contact"
+                        loading="lazy"  
                       />
                     </div>
                     <div>
@@ -105,6 +107,7 @@ useEffect(() => {
                         src={require("../assets/facebook.png")}
                         alt="phone"
                         className="img-fluid icon_contact"
+                        loading="lazy"
                       />
                     </div>
                     <div>
@@ -120,6 +123,7 @@ useEffect(() => {
                         src={require("../assets/email.png")}
                         alt="phone"
                         className="img-fluid icon_contact"
+                        loading="lazy"
                       />
                     </div>
                     <div>

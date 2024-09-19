@@ -591,7 +591,7 @@ function Courses() {
                         <img
                           src={`https://ba9maacademy.kasselsoft.online/${card.img}`}
                           className="card-img-top img-fluid card_img"
-                          alt="..."
+                          alt="course"
                           loading="lazy"
                         />
                         <div className="card-body">

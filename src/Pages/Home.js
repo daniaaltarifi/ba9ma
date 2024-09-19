@@ -59,6 +59,7 @@ function Home() {
               src={`https://ba9maacademy.kasselsoft.online/${abou.img}`}
               alt="about"
               className="about_img img-fluid "
+              loading="lazy"
             />
           </div>
           

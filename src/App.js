@@ -15,7 +15,6 @@ import Profile from './Pages/Profile.js';
 import ContactUs from './Pages/ContactUs.js';
 import Library from './Pages/Library.js';
 import MyCourses from './Pages/MyCourses.js';
-import AddBlog from './Pages/AddBlog.js';
 import { UserProvider } from './UserContext';
 
 import ForgotPassword from './Pages/ForgotPassword.js';
@@ -65,7 +64,6 @@ setUser({
           <Route path='/whoweare' element={<WhoWeAre/>}/>
           <Route path='/blogs' element={<Blogs/>}/>
           <Route path='/blogdetails/:id' element={<BlogDetails/>}/>
-          <Route path='/addblog' element={<AddBlog/>}/>
           <Route path='/cardprice' element={<CardPrice/>}/>
           <Route path='/library' element={<Library/>}/>
           <Route path='/mycourses' element={<MyCourses /> }/>

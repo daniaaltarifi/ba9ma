@@ -200,6 +200,7 @@ const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
                               <img
                                 src={`https://ba9maacademy.kasselsoft.online/` + blog.img}
                                 alt={blog.title}
+                                loading="lazy"
                               />
                               {blog.title}
                             </li>
@@ -223,7 +224,8 @@ const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
                         <img
                           src={`https://ba9maacademy.kasselsoft.online/${blog.img}`}
                           className="img-fluid img_blog"
-                          alt="..."
+                          alt="blog"
+                          loading="lazy"
                         />
                       </div>
                       <div className="col-lg-8 col-md-8 col-sm-12">
@@ -298,6 +300,7 @@ const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
                     src={`https://ba9maacademy.kasselsoft.online/` + lastthreeblogs.img}
                     alt=""
                     className="img-fluid img_last_blog"
+                    loading="lazy"
                   />
                   <p className="desc_last_blog">{lastthreeblogs.title}</p>
                 </div>
