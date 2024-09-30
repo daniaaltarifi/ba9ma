@@ -35,7 +35,7 @@ function Login() {
     try {
       // Perform the login process again since the user has accepted the modal
       const deviceInfo = getDeviceInfo();
-      const res = await axios.post('https://ba9maacademy.kasselsoft.online/api/login', {
+      const res = await axios.post('https://backendba9ma.ba9maonline.com/api/login', {
         email,
         password,
         deviceInfo
@@ -69,7 +69,7 @@ function Login() {
     // Capture device information
     try {
 
-      const res = await axios.post('https://ba9maacademy.kasselsoft.online/api/login', {
+      const res = await axios.post('https://backendba9ma.ba9maonline.com/api/login', {
         email,
         password,
         deviceInfo  // Include the device information in the request

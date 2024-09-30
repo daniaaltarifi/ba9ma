@@ -39,18 +39,23 @@ function Navbar({ handleLogout }) {
           >
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to="/contact" className="nav-link text_navbar" onClick={handleLinkClick}>
-                  اتصل بنا
+                <Link to="/" className="nav-link text_navbar" onClick={handleLinkClick}>
+                  الرئيسية
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/library" className="nav-link text_navbar" onClick={handleLinkClick}>
-                  المكتبة
+                <Link to="/courses" className="nav-link text_navbar" onClick={handleLinkClick}>
+                  تعلم معنا
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/blogs" className="nav-link text_navbar" onClick={handleLinkClick}>
-                  المدونة
+                <Link to="/whoweare" className="nav-link text_navbar" onClick={handleLinkClick}>
+                  من نحن
+                </Link>
+              </li>
+              <li className="nav-item dropdown">
+                <Link to="/cardprice" className="nav-link text_navbar" onClick={handleLinkClick}>
+                  نقاط البيع
                 </Link>
               </li>
               {user.isLoggedIn && (
@@ -60,24 +65,19 @@ function Navbar({ handleLogout }) {
                   </Link>
                 </li>
               )}
-              <li className="nav-item dropdown">
-                <Link to="/cardprice" className="nav-link text_navbar" onClick={handleLinkClick}>
-                  نقاط البيع
+              <li className="nav-item">
+                <Link to="/blogs" className="nav-link text_navbar" onClick={handleLinkClick}>
+                  المدونة
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/whoweare" className="nav-link text_navbar" onClick={handleLinkClick}>
-                  من نحن
+                <Link to="/library" className="nav-link text_navbar" onClick={handleLinkClick}>
+                  المكتبة
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/courses" className="nav-link text_navbar" onClick={handleLinkClick}>
-                  تعلم معنا
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/" className="nav-link text_navbar" onClick={handleLinkClick}>
-                  الرئيسية
+                <Link to="/contact" className="nav-link text_navbar" onClick={handleLinkClick}>
+                  اتصل بنا
                 </Link>
               </li>
             </ul>

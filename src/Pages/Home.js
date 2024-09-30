@@ -10,7 +10,7 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://ba9maacademy.kasselsoft.online/faq/");
+        const response = await axios.get("https://backendba9ma.ba9maonline.com/faq/");
         const data = response.data;
         setFaq(data);
       } catch (error) {
@@ -19,7 +19,7 @@ function Home() {
     };
     const fetchAbout = async () => {
       try {
-        const response = await axios.get("https://ba9maacademy.kasselsoft.online/about/");
+        const response = await axios.get("https://backendba9ma.ba9maonline.com/about/");
         const data = response.data;
         setAbout(data);
       } catch (error) {
@@ -28,7 +28,7 @@ function Home() {
     };
     const fetchBasma = async () => {
       try {
-        const response = await axios.get("https://ba9maacademy.kasselsoft.online/basmatrainig/basmatrainigbyid/1");
+        const response = await axios.get("https://backendba9ma.ba9maonline.com/basmatrainig/basmatrainigbyid/1");
         const data = response.data;
         setBasmaTraining(data);
     
@@ -56,7 +56,7 @@ function Home() {
           </div>
           <div className="col-lg-7 col-md-6 col-sm-12 d-flex justify-content-md-center align-items-center">
             <img
-              src={`https://ba9maacademy.kasselsoft.online/${abou.img}`}
+              src={`https://backendba9ma.ba9maonline.com/${abou.img}`}
               alt="about"
               className="about_img img-fluid "
               loading="lazy"

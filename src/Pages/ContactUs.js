@@ -9,7 +9,7 @@ function ContactUs() {
 
   const fetchContact= async () => {
     try {
-        const response = await axios.get(`https://ba9maacademy.kasselsoft.online/contactdynamic/`);
+        const response = await axios.get(`https://backendba9ma.ba9maonline.com/contactdynamic/`);
         const data=response.data;
         setContact(data);  // Assuming setTags is a function to update your state
    
@@ -25,7 +25,7 @@ useEffect(()=>{
   const handleSubmit = async ( name, email,comment) => {
    
     try {
-      const response = await axios.post("https://ba9maacademy.kasselsoft.online/connects/comments", {
+      const response = await axios.post("https://backendba9ma.ba9maonline.com/connects/comments", {
         name : name ,
          email: email,
          comment: comment

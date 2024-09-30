@@ -29,7 +29,7 @@ const CACHE_EXPIRY_TIME =60000; // Cache expiry time in milliseconds (e.g., 5 mi
   
   // const fetchSlider = async () => {
   //   try {
-  //     const response = await axios.get(`https://ba9maacademy.kasselsoft.online/sliders${page}`);
+  //     const response = await axios.get(`https://backendba9ma.ba9maonline.com/sliders${page}`);
   //     const data=response.data;
   //     setSlider(data);  // Assuming setTags is a function to update your state
   //     console.log("firstSlider", data);
@@ -50,7 +50,7 @@ const CACHE_EXPIRY_TIME =60000; // Cache expiry time in milliseconds (e.g., 5 mi
   //       setSlider(JSON.parse(storedData)); // Use data from local storage
   //     } else {
   //       // Fetch data from API if not in local storage
-  //       const response = await axios.get(`https://ba9maacademy.kasselsoft.online/sliders${page}`);
+  //       const response = await axios.get(`https://backendba9ma.ba9maonline.com/sliders${page}`);
   //       const data = response.data;
   //       setSlider(data);
   //       localStorage.setItem(storageKey, JSON.stringify(data)); // Store data in local storage
@@ -78,7 +78,7 @@ const CACHE_EXPIRY_TIME =60000; // Cache expiry time in milliseconds (e.g., 5 mi
         setSlider(JSON.parse(storedData));
       } else {
         // Fetch data from API if not cached or cache expired
-        const response = await axios.get(`https://ba9maacademy.kasselsoft.online/sliders${page}`);
+        const response = await axios.get(`https://backendba9ma.ba9maonline.com/sliders${page}`);
         const data = response.data;
         setSlider(data);
         localStorage.setItem(storageKey, JSON.stringify(data)); // Store data in local storage
@@ -106,7 +106,7 @@ const CACHE_EXPIRY_TIME =60000; // Cache expiry time in milliseconds (e.g., 5 mi
         {slider.map((slide) => (
           <div className={`slide-item `}>
             <img
-              src={`https://ba9maacademy.kasselsoft.online/${slide.slider_img}`}
+              src={`https://backendba9ma.ba9maonline.com/${slide.slider_img}`}
               alt={`slider img`}
               loading="lazy"
               className="img_home"
@@ -116,7 +116,7 @@ const CACHE_EXPIRY_TIME =60000; // Cache expiry time in milliseconds (e.g., 5 mi
               <div className="overlay-content">
                 {slide.img ? (
                   <img
-                    src={`https://ba9maacademy.kasselsoft.online/${slide.img}`}
+                    src={`https://backendba9ma.ba9maonline.com/${slide.img}`}
                     alt={slide.title}
                     height={"20%"}
                     loading="lazy"

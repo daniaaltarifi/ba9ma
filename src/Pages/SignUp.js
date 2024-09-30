@@ -68,7 +68,7 @@ function SignUp() {
     }
 
     try {
-      const res = await axios.post("https://ba9maacademy.kasselsoft.online/api/register", {
+      const res = await axios.post("https://backendba9ma.ba9maonline.com/api/register", {
         name,
         email,
         password,

@@ -11,7 +11,7 @@ const ForgotPassword = () => {
   const handleForgotPassword = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://ba9maacademy.kasselsoft.online/api/forgot-password', { email });
+      const res = await axios.post('https://backendba9ma.ba9maonline.com/api/forgot-password', { email });
 
       // Check if the response indicates that the email does not exist
       if (res.data === 'The email does not exist. Please enter the correct email.') {

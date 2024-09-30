@@ -104,7 +104,7 @@ function Courses() {
   
     // Validate coupon code and department ID
     try {
-      const couponResponse = await axios.get(`https://ba9maacademy.kasselsoft.online/coupon/coupons/${coupon_code}`);
+      const couponResponse = await axios.get(`https://backendba9ma.ba9maonline.com/coupon/coupons/${coupon_code}`);
       const couponData = couponResponse.data;
        
 
@@ -122,7 +122,7 @@ function Courses() {
       }
   
       try {
-        const response = await axios.post('https://ba9maacademy.kasselsoft.online/api/buy', {
+        const response = await axios.post('https://backendba9ma.ba9maonline.com/api/buy', {
           student_name: studentName,
           email,
           address,
@@ -167,18 +167,18 @@ function Courses() {
     const teacherEmail = selectedTeacherEmail;  
   
   
-    let url = 'https://ba9maacademy.kasselsoft.online/courses';
+    let url = 'https://backendba9ma.ba9maonline.com/courses';
 
 
     if (departmentId && teacherEmail) {
       // Both department and teacher filters are selected
-      url = `https://ba9maacademy.kasselsoft.online/courses/filter/${departmentId}/${teacherEmail}`;
+      url = `https://backendba9ma.ba9maonline.com/courses/filter/${departmentId}/${teacherEmail}`;
   } else if (departmentId) {
       // Only department filter is selected
-      url = `https://ba9maacademy.kasselsoft.online/courses/getbydep/${departmentId}`;
+      url = `https://backendba9ma.ba9maonline.com/courses/getbydep/${departmentId}`;
   } else if (teacherEmail) {
       // Only teacher filter is selected
-      url = `https://ba9maacademy.kasselsoft.online/teacher/teachercourse/${teacherEmail}`;
+      url = `https://backendba9ma.ba9maonline.com/teacher/teachercourse/${teacherEmail}`;
   }
     try {
       const response = await axios.get(url);
@@ -200,10 +200,10 @@ function Courses() {
               const [studentCountResponse, lessonCountResponse] =
                 await Promise.all([
                   axios.get(
-                    `https://ba9maacademy.kasselsoft.online/courses/users-counts/${course.id}`
+                    `https://backendba9ma.ba9maonline.com/courses/users-counts/${course.id}`
                   ),
                   axios.get(
-                    `https://ba9maacademy.kasselsoft.online/courses/lesson-counts/${course.id}`
+                    `https://backendba9ma.ba9maonline.com/courses/lesson-counts/${course.id}`
                   ),
                 ]);
   
@@ -264,7 +264,7 @@ function Courses() {
     const fetchDepartments = async () => {
       try {
         const response = await axios.get(
-          "https://ba9maacademy.kasselsoft.online/department"
+          "https://backendba9ma.ba9maonline.com/department"
         );
         setDepartment(response.data);
       } catch (error) {
@@ -279,7 +279,7 @@ function Courses() {
       if (!selectedDepartment) return; // Do nothing if no department is selected
       
       try {
-        const response = await axios.get(`https://ba9maacademy.kasselsoft.online/courses/getbydep/${selectedDepartment}`);
+        const response = await axios.get(`https://backendba9ma.ba9maonline.com/courses/getbydep/${selectedDepartment}`);
         const rawData = response.data;
 
         // Remove duplicates
@@ -589,7 +589,7 @@ function Courses() {
                     >
                       <div className="card card_cont">
                         <img
-                          src={`https://ba9maacademy.kasselsoft.online/${card.img}`}
+                          src={`https://backendba9ma.ba9maonline.com/${card.img}`}
                           className="card-img-top img-fluid card_img"
                           alt="course"
                           loading="lazy"

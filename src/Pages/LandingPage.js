@@ -23,7 +23,7 @@ useEffect(()=>{
 },[page])
 const fetchBoxSLider = async () => {
   try {
-    const response = await axios.get("https://ba9maacademy.kasselsoft.online/boxslider/");
+    const response = await axios.get("https://backendba9ma.ba9maonline.com/boxslider/");
     const data = response.data;
     setBoxUnderSlider(data);
   } catch (error) {
@@ -36,7 +36,7 @@ const fetchSlider = async () => {
     if (storedData) {
       setSlider(JSON.parse(storedData)); // Use data from local storage
     } else {
-      const response = await axios.get(`https://ba9maacademy.kasselsoft.online/sliders`);
+      const response = await axios.get(`https://backendba9ma.ba9maonline.com/sliders`);
       const data=response.data;
       setSlider(data);  // Assuming setTags is a function to update your state
     localStorage.setItem("sliderData", JSON.stringify(data)); // Store data in local storage
@@ -74,7 +74,7 @@ return (
         {slider.map((slide) => (
           <div className="slide-item">
             <img
-              src={`https://ba9maacademy.kasselsoft.online/${slide.slider_img}`}
+              src={`https://backendba9ma.ba9maonline.com/${slide.slider_img}`}
               alt={`slider img`}
               className="img_home"
               loading="lazy"
@@ -84,7 +84,7 @@ return (
               <div className="overlay-content">
                 {slide.img ? (
                   <img
-                    src={`https://ba9maacademy.kasselsoft.online/${slide.img}`}
+                    src={`https://backendba9ma.ba9maonline.com/${slide.img}`}
                     alt={slide.title}
                     height={"20%"}
                     width={"20%"}

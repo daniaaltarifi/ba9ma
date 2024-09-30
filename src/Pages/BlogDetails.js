@@ -19,7 +19,7 @@ function BlogDetails() {
   useEffect(() => {
     const fetchBlogDetails = async () => {
       try {
-        const response = await fetch(`https://ba9maacademy.kasselsoft.online/blog/blogdetails/${id}`);
+        const response = await fetch(`https://backendba9ma.ba9maonline.com/blog/blogdetails/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch blog details");
         }
@@ -32,14 +32,14 @@ function BlogDetails() {
 
     
     const fetchLastThreeBlogs = async () => {
-      const response = await axios.get("https://ba9maacademy.kasselsoft.online/blog/lastthree");
+      const response = await axios.get("https://backendba9ma.ba9maonline.com/blog/lastthree");
       const blogsData = response.data;
               const approvedBlogs = blogsData.filter(blog => blog.action === 'approved');
               setLastThreeBlogs(approvedBlogs);
     };
     const fetchTags = async () => {
       try {
-          const response = await axios.get("https://ba9maacademy.kasselsoft.online/tag/uniquetag");
+          const response = await axios.get("https://backendba9ma.ba9maonline.com/tag/uniquetag");
           const tags = response.data;
           setTags(tags);  // Assuming setTags is a function to update your state
       } catch (error) {
@@ -48,7 +48,7 @@ function BlogDetails() {
   };
     const fetchCommentBlogs = async () => {
       try {
-        const response = await axios.get(`https://ba9maacademy.kasselsoft.online/commentblog`);
+        const response = await axios.get(`https://backendba9ma.ba9maonline.com/commentblog`);
         const comments = response.data;
         const approvedComments = comments.filter(
           (comment) => comment.action === "approved"
@@ -93,7 +93,7 @@ function BlogDetails() {
   const handleSubmit = async (name, email, comment) => {
     try {
       const response = await axios.post(
-        "https://ba9maacademy.kasselsoft.online/commentblog/add",
+        "https://backendba9ma.ba9maonline.com/commentblog/add",
         {
           name: name,
           email: email,
@@ -121,7 +121,7 @@ function BlogDetails() {
             <div className="row justify-content-center align-items-center">
               <div className="col-lg-6 col-md-6 cl-sm-12 d-flex justify-content-center">
                 <img
-                  src={`https://ba9maacademy.kasselsoft.online/${img}`}
+                  src={`https://backendba9ma.ba9maonline.com/${img}`}
                   alt="coursedetails"
                   className="img-fluid img_blogdetails"
                   loading="lazy"
@@ -246,7 +246,7 @@ function BlogDetails() {
 
                       <div className="categ_lastblog_cont">
                         <img
-                          src={`https://ba9maacademy.kasselsoft.online/` + lastthreeblogs.img}
+                          src={`https://backendba9ma.ba9maonline.com/` + lastthreeblogs.img}
                           alt=""
                           className="img-fluid img_last_blog"
                           loading="lazy"

@@ -18,7 +18,7 @@ function Blogs() {
   const tag_name = location.state?.tag_name;
   const fetchBlog = async () => {
     try {
-      const response = await axios.get("https://ba9maacademy.kasselsoft.online/blog");
+      const response = await axios.get("https://backendba9ma.ba9maonline.com/blog");
       const blogsData = response.data;
             const approvedBlogs = blogsData.filter(blog => blog.action === 'approved');
       setBlogs(approvedBlogs);
@@ -26,7 +26,7 @@ function Blogs() {
   };
   const fetchTags = async () => {
     try {
-        const response = await axios.get("https://ba9maacademy.kasselsoft.online/tag/uniquetag");
+        const response = await axios.get("https://backendba9ma.ba9maonline.com/tag/uniquetag");
         const tags = response.data;
         setTags(tags);  // Assuming setTags is a function to update your state
     } catch (error) {
@@ -35,14 +35,14 @@ function Blogs() {
 };
 
   const fetchLastThreeBlogs = async () => {
-    const response = await axios.get("https://ba9maacademy.kasselsoft.online/blog/lastthree");
+    const response = await axios.get("https://backendba9ma.ba9maonline.com/blog/lastthree");
     const blogsData = response.data;
             const approvedBlogs = blogsData.filter(blog => blog.action === 'approved');
             setLastThreeBlogs(approvedBlogs);
   };
   const fetchDynamicBlog= async () => {
     try {
-      const response = await axios.get("https://ba9maacademy.kasselsoft.online/dynamicblog/");
+      const response = await axios.get("https://backendba9ma.ba9maonline.com/dynamicblog/");
       const data = response.data;
       setDynamicBlog(data);
     } catch (error) {
@@ -74,7 +74,7 @@ function Blogs() {
   };
   const handleTagClick = async (tag_name) => {
     try {
-        const response = await axios.get(`https://ba9maacademy.kasselsoft.online/tag/blogbytag/${tag_name}`);
+        const response = await axios.get(`https://backendba9ma.ba9maonline.com/tag/blogbytag/${tag_name}`);
         const blogs = response.data;
  const mappedBlogs = blogs.map(tag => ({
         id: tag.blog_id,  // Adjust as needed
@@ -198,7 +198,7 @@ const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
                               }}
                             >
                               <img
-                                src={`https://ba9maacademy.kasselsoft.online/` + blog.img}
+                                src={`https://backendba9ma.ba9maonline.com/` + blog.img}
                                 alt={blog.title}
                                 loading="lazy"
                               />
@@ -222,7 +222,7 @@ const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
                     <div className="row g-0">
                       <div className="col-lg-4 col-md-4 col-sm-12 img_col_blogs">
                         <img
-                          src={`https://ba9maacademy.kasselsoft.online/${blog.img}`}
+                          src={`https://backendba9ma.ba9maonline.com/${blog.img}`}
                           className="img-fluid img_blog"
                           alt="blog"
                           loading="lazy"
@@ -297,7 +297,7 @@ const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
                 <Link to={`/blogdetails/${lastthreeblogs.id}`} style={{textDecoration:"none",color:"#000"}} >
                 <div className="categ_lastblog_cont">
                   <img
-                    src={`https://ba9maacademy.kasselsoft.online/` + lastthreeblogs.img}
+                    src={`https://backendba9ma.ba9maonline.com/` + lastthreeblogs.img}
                     alt=""
                     className="img-fluid img_last_blog"
                     loading="lazy"

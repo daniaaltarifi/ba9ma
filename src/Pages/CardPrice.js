@@ -18,7 +18,7 @@ function CardPrice() {
     const fetchGoverment = async () => {
       try {
         const response = await axios.get(
-          "https://ba9maacademy.kasselsoft.online/cards"
+          "https://backendba9ma.ba9maonline.com/cards"
         );
         const gov = response.data;
         setGoverment(gov);
@@ -29,7 +29,7 @@ function CardPrice() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://ba9maacademy.kasselsoft.online/department/"
+          "https://backendba9ma.ba9maonline.com/department/"
         );
         const data = response.data;
         setDepartmentData(data);
@@ -40,7 +40,7 @@ function CardPrice() {
     const fetchPurchaseSteps = async () => {
       try {
         const response = await axios.get(
-          "https://ba9maacademy.kasselsoft.online/purchasesteps"
+          "https://backendba9ma.ba9maonline.com/purchasesteps"
         );
         setPurchaseSteps(response.data);
       } catch (error) {
@@ -55,7 +55,7 @@ function CardPrice() {
   const fetchcards = async (id) => {
     try {
       const response = await axios.get(
-        `https://ba9maacademy.kasselsoft.online/cards/${id}`
+        `https://backendba9ma.ba9maonline.com/cards/${id}`
       );
       setSelectedGovernorate(response.data);
       setSelectedGovernorateId(id);
@@ -110,7 +110,7 @@ function CardPrice() {
               <div className="col-lg-3 col-md-6 col-sm-12 ">
                 <div className="box_purple__orderby_cardprice">
                   <img
-                    src={`https://ba9maacademy.kasselsoft.online/${step.img}`}
+                    src={`https://backendba9ma.ba9maonline.com/${step.img}`}
                     alt="www icon"
                     className="img-fluid icon_orderby_cardprice"
                     loading="lazy"

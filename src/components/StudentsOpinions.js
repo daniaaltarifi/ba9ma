@@ -41,7 +41,7 @@ function StudentsOpinions() {
       useEffect(() => {
         const fetchComment = async () => {
           try {
-            const response = await axios.get("https://ba9maacademy.kasselsoft.online/connects/comment");
+            const response = await axios.get("https://backendba9ma.ba9maonline.com/connects/comment");
             const commentsData = response.data;
             const approvedComments = commentsData.filter(comment => comment.action === 'approved');
             setComments(approvedComments);

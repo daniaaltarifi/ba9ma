@@ -44,7 +44,7 @@ const [blobImg,setBlobImg]=useState("")
       return;
     }
     try {
-      const response = await fetch('https://ba9maacademy.kasselsoft.online/api/logout', {
+      const response = await fetch('https://backendba9ma.ba9maonline.com/api/logout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

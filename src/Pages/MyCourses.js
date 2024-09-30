@@ -18,7 +18,7 @@ function MyCourses() {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          `https://ba9maacademy.kasselsoft.online/api/getApprovedCoursesForUser/${userId}`
+          `https://backendba9ma.ba9maonline.com/api/getApprovedCoursesForUser/${userId}`
         );
         setCourses(response.data);
         setSearchResults(response.data);
@@ -37,7 +37,7 @@ function MyCourses() {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          `https://ba9maacademy.kasselsoft.online/api/getApprovedCoursesForUser/${userId}`
+          `https://backendba9ma.ba9maonline.com/api/getApprovedCoursesForUser/${userId}`
         );
         const fetchedCourses = response.data;
   
@@ -46,11 +46,11 @@ function MyCourses() {
           fetchedCourses.map(async (course) => {
             try {
               const studentCountResponse = await axios.get(
-                `https://ba9maacademy.kasselsoft.online/courses/users-counts/${course.course_id}`
+                `https://backendba9ma.ba9maonline.com/courses/users-counts/${course.course_id}`
               );
   
               const lessonCountResponse = await axios.get(
-                `https://ba9maacademy.kasselsoft.online/courses/lesson-counts/${course.course_id}`
+                `https://backendba9ma.ba9maonline.com/courses/lesson-counts/${course.course_id}`
               );
   
 
@@ -91,7 +91,7 @@ function MyCourses() {
   useEffect(() => {
     const fetchDepartments = async () => {
       try {
-        const response = await axios.get("https://ba9maacademy.kasselsoft.online/department");
+        const response = await axios.get("https://backendba9ma.ba9maonline.com/department");
         setDepartment(response.data);
       } catch (error) {
         console.error("Error fetching departments:", error);
@@ -206,7 +206,7 @@ function MyCourses() {
            >
              <div className="card card_cont">
                <img
-                 src={`https://ba9maacademy.kasselsoft.online/${course.img}`}
+                 src={`https://backendba9ma.ba9maonline.com/${course.img}`}
                  className="card-img-top img-fluid card_img"
                  alt={course.subject_name}
                  loading="lazy"

@@ -16,7 +16,7 @@ function WhoWeAre() {
   const fetchBasma = async () => {
     try {
       const response = await axios.get(
-        "https://ba9maacademy.kasselsoft.online/basmatrainig/basmatrainigbyid/2"
+        "https://backendba9ma.ba9maonline.com/basmatrainig/basmatrainigbyid/2"
       );
       const data = response.data;
       setBasmaTraining(data);
@@ -27,7 +27,7 @@ function WhoWeAre() {
   const fetchWhoweare = async () => {
     try {
       const response = await axios.get(
-        "https://ba9maacademy.kasselsoft.online/whoweare"
+        "https://backendba9ma.ba9maonline.com/whoweare"
       );
       const data = response.data;
       setWhoweare(data);
@@ -38,7 +38,7 @@ function WhoWeAre() {
   const fetchAboutTeacher = async () => {
     try {
       const response = await axios.get(
-        "https://ba9maacademy.kasselsoft.online/aboutteacher"
+        "https://backendba9ma.ba9maonline.com/aboutteacher"
       );
       setAboutTeacher(response.data);
     } catch (error) {
@@ -94,7 +94,7 @@ function WhoWeAre() {
             </div>{" "}
             <div className="col-lg-7 col-md-6 col-sm-12 ">
               <img
-                src={`https://ba9maacademy.kasselsoft.online/${tech.img}`}
+                src={`https://backendba9ma.ba9maonline.com/${tech.img}`}
                 alt="about"
                 className="about_img img-fluid "
                 loading="lazy"

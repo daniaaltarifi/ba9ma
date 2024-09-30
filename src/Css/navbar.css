@@ -1,6 +1,11 @@
 body{
   font-family: "Cairo", sans-serif;
 }
+
+/* Default styles (for larger screens) */
+.navbar-nav {
+  direction: rtl; /* Ensures RTL layout */
+}
 .purple_btn {
   background-color: #833988;
   color: #fff;
@@ -59,5 +64,21 @@ body{
   .logo_container {
     /* height: 30%; */
     width: 35%;
+  }
+}
+
+/* For collapsed menu on smaller screens */
+@media (max-width: 991.98px) { /* Bootstrap lg breakpoint */
+  .navbar-collapse {
+    direction: rtl; /* Ensure RTL direction */
+    text-align: left; /* Align text to left */
+  }
+  
+  .navbar-nav {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .navbar-nav .nav-item {
+    text-align: right; /* Ensures each link aligns correctly in RTL */
   }
 }

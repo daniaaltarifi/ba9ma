@@ -17,7 +17,7 @@ function Library() {
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const fetchLibrary = async () => {
     try {
-      const response = await axios.get("https://ba9maacademy.kasselsoft.online/library");
+      const response = await axios.get("https://backendba9ma.ba9maonline.com/library");
       setLibrary(response.data);
     } catch (error) {
       console.error("Error fetching library:", error);
@@ -27,7 +27,7 @@ function Library() {
     window.scrollTo(0, 0);
     const fetchDepartments = async () => {
       try {
-        const response = await axios.get("https://ba9maacademy.kasselsoft.online/department");
+        const response = await axios.get("https://backendba9ma.ba9maonline.com/department");
         setDepartment(response.data);
       } catch (error) {
         console.error("Error fetching departments:", error);
@@ -66,7 +66,7 @@ function Library() {
 
   const handleDownload = async (fileName) => {
     try {
-      const response = await axios.get(`https://ba9maacademy.kasselsoft.online/${fileName}`, {
+      const response = await axios.get(`https://backendba9ma.ba9maonline.com/${fileName}`, {
         responseType: "blob", // Important: responseType blob for downloading files
       });
       const url = window.URL.createObjectURL(new Blob([response.data]));
@@ -82,7 +82,7 @@ function Library() {
   const fetchLibraryBasedDepartment = async (selectedDepartmentId) => {
     try {
       const response = await axios.get(
-        `https://ba9maacademy.kasselsoft.online/library/getbydep/${selectedDepartmentId}`
+        `https://backendba9ma.ba9maonline.com/library/getbydep/${selectedDepartmentId}`
       ); 
       setLibrary(response.data);
     } catch (error) {
@@ -183,7 +183,7 @@ useEffect(() => {
                 >
                   <div className="card card_cont">
                     <img
-                      src={require("../assets/course.webp")}
+                      src={require("../assets/course.png")}
                       className="card-img-top img-fluid card_img"
                       alt="library"
                       loading="lazy"

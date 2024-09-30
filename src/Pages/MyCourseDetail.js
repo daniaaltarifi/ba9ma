@@ -65,7 +65,7 @@ function MyCourseDetail() {
       const fetchCommentCourses = async () => {
         try {
           const response = await axios.get(
-            `https://ba9maacademy.kasselsoft.online/commentcourse`
+            `https://backendba9ma.ba9maonline.com/commentcourse`
           );
           const comments = response.data;
           const approvedComments = comments.filter(
@@ -83,7 +83,7 @@ function MyCourseDetail() {
     }, []);
     const handleDownload = async (fileName) => {
       try {
-        const response = await axios.get(`https://ba9maacademy.kasselsoft.online/${fileName}`, {
+        const response = await axios.get(`https://backendba9ma.ba9maonline.com/${fileName}`, {
           responseType: "blob", // Important: responseType blob for downloading files
         });
         const url = window.URL.createObjectURL(new Blob([response.data]));
@@ -100,7 +100,7 @@ function MyCourseDetail() {
       const fetchVideosData = async () => {
         try {
           const response = await fetch(
-            `https://ba9maacademy.kasselsoft.online/courses/getbyvideo/${id}`
+            `https://backendba9ma.ba9maonline.com/courses/getbyvideo/${id}`
           );
           if (!response.ok) {
             throw new Error("Failed to fetch video details");
@@ -248,7 +248,7 @@ function MyCourseDetail() {
     const handleSubmit = async (name, email, comment, rating) => {
       try {
         const response = await axios.post(
-          "https://ba9maacademy.kasselsoft.online/commentcourse/add",
+          "https://backendba9ma.ba9maonline.com/commentcourse/add",
           {
             name: name,
             email: email,
@@ -270,7 +270,7 @@ function MyCourseDetail() {
       const fetchCourseCount = async () => {
         try {
           const response = await axios.get(
-            `https://ba9maacademy.kasselsoft.online/courses/course-counts/${teacherId}`
+            `https://backendba9ma.ba9maonline.com/courses/course-counts/${teacherId}`
           );
           // Assume response.data is an array with one object
           const data = response.data;
@@ -291,7 +291,7 @@ function MyCourseDetail() {
       const fetchStudentCount = async () => {
         try {
           const response = await axios.get(
-            `https://ba9maacademy.kasselsoft.online/courses/users-counts/${courseId}`
+            `https://backendba9ma.ba9maonline.com/courses/users-counts/${courseId}`
           );
           const data = response.data;
           if (data && data.student_count !== undefined) {
@@ -311,7 +311,7 @@ function MyCourseDetail() {
     const fetchCourseDetails = async () => {
       try {
         const response = await fetch(
-          `https://ba9maacademy.kasselsoft.online/courses/${id}`
+          `https://backendba9ma.ba9maonline.com/courses/${id}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch blog details");
@@ -330,7 +330,7 @@ function MyCourseDetail() {
       const fetchLessonCounts = async () => {
         try {
           const response = await axios.get(
-            `https://ba9maacademy.kasselsoft.online/courses/lesson-counts/${courseId}`
+            `https://backendba9ma.ba9maonline.com/courses/lesson-counts/${courseId}`
           );
           const data = response.data;
           if (data.length > 0) {
@@ -352,7 +352,7 @@ function MyCourseDetail() {
       if (teacherId) {
         try {
           const response = await axios.get(
-            `https://ba9maacademy.kasselsoft.online/teacher/student-counts/${teacherId}`
+            `https://backendba9ma.ba9maonline.com/teacher/student-counts/${teacherId}`
           );
           const data = response.data;
           if (data && data.student_count !== undefined) {
@@ -384,7 +384,7 @@ function MyCourseDetail() {
     const validateCouponCode = async (code) => {
       try {
         const response = await fetch(
-          "https://ba9maacademy.kasselsoft.online/api/validate",
+          "https://backendba9ma.ba9maonline.com/api/validate",
           {
             method: "POST",
             headers: {
@@ -456,7 +456,7 @@ function MyCourseDetail() {
       }
       try {
         const response = await axios.post(
-          "https://ba9maacademy.kasselsoft.online/api/courses",
+          "https://backendba9ma.ba9maonline.com/api/courses",
           {
             student_name: studentName,
             email: email,
@@ -501,7 +501,7 @@ function MyCourseDetail() {
       const fetchCourseUsers = async () => {
         try {
           const response = await axios.get(
-            "https://ba9maacademy.kasselsoft.online/api/getallcourseusers"
+            "https://backendba9ma.ba9maonline.com/api/getallcourseusers"
           );
           setCourse_users(response.data);
         } catch (error) {
@@ -517,7 +517,7 @@ function MyCourseDetail() {
     // Example API call to fetch course details
     const fetchCourseData = async () => {
       try {
-        const response = await axios.get(`https://ba9maacademy.kasselsoft.online/courses/${courseId}`);
+        const response = await axios.get(`https://backendba9ma.ba9maonline.com/courses/${courseId}`);
         setCourse(response.data);
       } catch (error) {
         console.error("Error fetching course data:", error);
@@ -560,7 +560,7 @@ function MyCourseDetail() {
             <div className="row ">
               <div className="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
                 <img
-                  src={`https://ba9maacademy.kasselsoft.online/${course.img}`}
+                  src={`https://backendba9ma.ba9maonline.com/${course.img}`}
                   alt="coursedetails"
                   className="img-fluid img_coursedetails"
                   loading="lazy"
@@ -637,7 +637,7 @@ function MyCourseDetail() {
                             }
                           >
                             <source
-                              src={`https://ba9maacademy.kasselsoft.online/${videosData[0].defaultvideo}`} // Assuming first video is default
+                              src={`https://backendba9ma.ba9maonline.com/${videosData[0].defaultvideo}`} // Assuming first video is default
                               type="video/mp4"
                             />
                             Your browser does not support the video tag.
@@ -838,7 +838,7 @@ function MyCourseDetail() {
                                     preload="metadata"
                                   >
                                     <source
-                                      src={`https://ba9maacademy.kasselsoft.online/${videosData[currentVideoIndex].url}`}
+                                      src={`https://backendba9ma.ba9maonline.com/${videosData[currentVideoIndex].url}`}
                                       type="video/mp4"
                                     />
                                     Your browser does not support the video tag.
@@ -1024,7 +1024,7 @@ function MyCourseDetail() {
                         <div className="row">
                           <div className="col-lg-3 col-md-3 col-sm-12">
                             <img
-                              src={`https://ba9maacademy.kasselsoft.online/${course.img}`}
+                              src={`https://backendba9ma.ba9maonline.com/${course.img}`}
                               alt="teacher img"
                               height={"80vh"}
                               width={"80vh"}

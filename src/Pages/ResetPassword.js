@@ -19,7 +19,7 @@ function ResetPassword() {
     }
     try {
             const res = await axios.post(
-              `https://ba9maacademy.kasselsoft.online/api/reset-password/${token}`,
+              `https://backendba9ma.ba9maonline.com/api/reset-password/${token}`,
               { password, confirmPassword },
               { headers: { 'Content-Type': 'application/json' } }
             );
